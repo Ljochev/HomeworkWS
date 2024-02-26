@@ -8,7 +8,6 @@ const {
     update,
     remove,
     destroy,
-
 } = require("../models/cars");
 
 const getOneCar = async (req, res) => {

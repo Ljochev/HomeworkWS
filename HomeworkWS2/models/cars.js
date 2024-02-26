@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const carSchema =  mongoose.Schema({
+const carSchema = new mongoose.Schema({
 make: String,
 model: String,
 year: Number,
@@ -16,10 +16,14 @@ updatedAT: {
     type: Date,
     default: () => Date.now()
 }
+// user: {
+//     type: mongoose.SchemaTypes.ObjectId,
+//     ref: Cars
+// }
 });
 
 
-const Car = mongoose.model("semos", carSchema, "cars");
+const Car = mongoose.model("Cars", carSchema, "cars");
 
 
 const getById = async (id) => {

@@ -1,4 +1,9 @@
 const express = require("express");
+require("./db/config");
+const app = express();
+app.use(express.json());
+
+
 
 const {
     getOneCar,
@@ -10,15 +15,8 @@ const {
     updateCar,
     deleteCar,
     deleteAllCars,
-    
-
 } = require("./controllers/cars");
 
-require("./db/config");
-
-const app = express();
-
-app.use(express.json());
 
 app.get("/cars/ID/:id", getOneCar);
 
@@ -32,11 +30,12 @@ app.get("/cars/all", getAllCars);
 
 app.post("/cars", createCar);
 
-app.put("/cars/:id", updateCar)
+app.put("/cars/:id", updateCar);
 
-app.delete("/cars/ID/:id", deleteCar)
+app.delete("/cars/ID/:id", deleteCar);
 
-app.delete("/cars/all", deleteAllCars)
+app.delete("/cars/all", deleteAllCars);
+
 
 const port = 3000;
 
