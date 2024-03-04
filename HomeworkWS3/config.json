@@ -1,0 +1,16 @@
+{"development" : {
+        "MONGO_USER_NAME": "ljochev",
+        "MONGO_PASSWORD": "Ljochev123",
+        "PORT": 3000
+    },
+    "staging" : {
+        "MONGO_USER_NAME": "admin",
+        "MONGO_PASSWORD": "admin",
+        "PORT": 5000
+    },
+    "live" : {
+        "MONGO_USER_NAME": "user",
+        "MONGO_PASSWORD": "user",
+        "PORT": 8080
+    }
+}
