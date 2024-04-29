@@ -46,6 +46,7 @@ return await Account.updateOne({ _id: id }, {password});
 };
 
 const getAllEmailSorted = async () => {
+// return await Account.find({}).select({"ime:"}).sort({ email: 1});
 return await Account.find({}).sort({ email: 1});
 };
 

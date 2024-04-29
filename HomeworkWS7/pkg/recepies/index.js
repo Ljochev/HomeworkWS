@@ -31,7 +31,7 @@ return await Recepie.find({user_id: userId}).sort({ime: 1});
 };
 
 const getOneRecepieById = async (id) => {
-    console.log("I'm in getOneRecepieById");
+    // console.log("I'm in getOneRecepieById");
 return await Recepie.findOne({ _id: id});
 };
 

@@ -58,7 +58,7 @@ const deleteRecepie = async (req, res) => {
 
 const getAllRecepiesSortedByName = async (req, res) => {
     try {
-        console.log(req.auth.id);
+        // console.log(req.auth.id);
         const recepie = await listSortetName(req.auth.id.toString());
         return res.status(200).send(recepie);
     } catch (error) {

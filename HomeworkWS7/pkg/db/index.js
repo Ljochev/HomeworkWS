@@ -3,7 +3,9 @@ const mongoose = require("mongoose");
 const { getSection } = require("./../config/index");
 const { MONGO_USERNAME, MONGO_PASSWORD} = getSection("development");
 
-const uri = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@cluster0.coopvs9.mongodb.net/semos?retryWrites=true&w=majority&appName=Cluster0`;
+// const uri = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@cluster0.yz3nuw7.mongodb.net/semos?retryWrites=true&w=majority&appName=Cluster0`;
+
+const uri =`mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@cluster0.coopvs9.mongodb.net/semos?retryWrites=true&w=majority&appName=Cluster0`;
 
 const connect = async () => {
     // console.log(uri);

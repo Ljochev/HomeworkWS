@@ -25,7 +25,7 @@ const { getSection } = require("./../pkg/config/index");
 
 const createNewUser = async (req, res) => {
     try {
-        await validate(req.body, AccountRegister);
+        // await validate(req.body, AccountRegister);
         const { email, password, confirmPassword } = req.body;
         const exist = await getByEmail( req.body.email );
         if(exist) {
@@ -44,7 +44,7 @@ const createNewUser = async (req, res) => {
 
 const login = async (req, res) => {
     try {
-        await validate(req.body, AccountLogin);
+        // await validate(req.body, AccountLogin);
         const { email, password } = req.body;
         const account = await getByEmail(email);
         if(!account) {
@@ -120,7 +120,7 @@ const forgotPassword = async (req, res) => {
 const getAllUserEmailsSorted = async (req, res) => {
     try {
     const allUsers = await getAllEmailSorted();
-    let users = []
+    let users = [];
     allUsers.forEach(user => {
         users.push(user.email);
     });

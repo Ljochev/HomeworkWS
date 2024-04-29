@@ -11,11 +11,11 @@ time: "required|string",
 
 const RecepieUpdate = {
     ime: "string",
-    "sostojki": "array",
-    "sostojki.*": "string",
+    // "sostojki": "array",
+    // "sostojki.*": "string",
     time: "string",
-    "making": "array",
-    "making.*": "string",
+    // "making": "array",
+    // "making.*": "string",
     };
 
 const validateRecepie = async (data, schema) => {
